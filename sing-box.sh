@@ -978,6 +978,11 @@ check_system_info() {
   fi
 }
 
+get_sing_box_version() {
+    echo "1.14.2"
+}
+
+"""
 # 获取 sing-box 最新版本
 get_sing_box_version() {
   # FORCE_VERSION 用于在 sing-box 某个主程序出现 bug 时，强制为指定版本，以防止运行出错
@@ -996,6 +1001,8 @@ get_sing_box_version() {
   fi
   echo "$RESULT_VERSION"
 }
+"""
+
 
 # 添加端口跳跃
 add_port_hopping_nat() {
