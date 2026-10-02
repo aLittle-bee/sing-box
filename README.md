@@ -3,10 +3,9 @@
 #改动
 - Sing-box版本固定1.14.2
 - 请使用以下链接
-'''
-bash <(curl -Ls https://raw.githubusercontent.com/aLittle-bee/sing-box/main/sing-box.sh)
-'''
-
+```
+bash <(wget -qO- https://raw.githubusercontent.com/aLittle-bee/sing-box/main/sing-box.sh) -f config.conf
+```
 * * *
 
 # 目录
