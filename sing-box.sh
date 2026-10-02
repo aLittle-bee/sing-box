@@ -1225,6 +1225,17 @@ sing-box_variables() {
   # 如果选择有 b j k 这些 reality 协议，自定义 reality 公私钥，如果没有则自动生成
   [ "$NONINTERACTIVE_INSTALL" != 'noninteractive_install' ] && [[ "${INSTALL_PROTOCOLS[@]}" =~ 'b'|'j'|'k' ]] && input_reality_key
 
+
+
+
+  # 自定义 Reality SNI
+  if [ "$NONINTERACTIVE_INSTALL" != 'noninteractive_install' ] && [[ "${INSTALL_PROTOCOLS[@]}" =~ 'b'|'j'|'k' ]]; then
+    reading "\n请输入 Reality SNI 域名（默认: ${TLS_SERVER_DEFAULT}）: " TLS_SERVER_CUSTOM
+    TLS_SERVER_DEFAULT=${TLS_SERVER_CUSTOM:-"$TLS_SERVER_DEFAULT"}
+  fi
+
+
+
   # 如选择有 c. hysteria2 时，选择是否使用端口跳跃
   [[ "${INSTALL_PROTOCOLS[@]}" =~ 'c' ]] && input_hopping_port
 
